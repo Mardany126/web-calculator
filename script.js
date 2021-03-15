@@ -20,7 +20,7 @@ function calculate() {
             var answer = parseInt(num1) / parseInt(num2)
             break;
         default:
-            var answer = 'Undefined'
+            var answer = 'Undeclared'
     }
 
     document.getElementById('answer').innerHTML = answer
