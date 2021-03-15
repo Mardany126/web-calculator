@@ -1,6 +1,27 @@
-function sum() {
-    var num1 = parseInt(document.getElementById("num1").value)
-    var num2 = parseInt(document.getElementById("num2").value)   
-    
-    document.getElementById("answer").value = num1 + num2
+function calculate() {
+    var num1 = document.getElementById("num1").value
+    var num2 = document.getElementById("num2").value 
+    var opSelector = document.getElementById('operator')
+   
+    var operator =
+    opSelector.options[opSelector.selectedIndex].value
+
+    switch (operator) {
+        case 'add':
+            var answer = parseInt(num1) + parseInt(num2)
+            break;
+        case 'subtract':
+            var answer = parseInt(num1) - parseInt(num2)
+            break;
+        case 'multiply':
+            var answer = parseInt(num1) * parseInt(num2)
+            break;
+        case 'divide':
+            var answer = parseInt(num1) / parseInt(num2)
+            break;
+        default:
+            var answer = 'Undefined'
+    }
+
+    document.getElementById('answer').innerHTML = answer
     }
